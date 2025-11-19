@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music for Media - Film Scores & Soundtracks | Ezequiel Navarrete</title>
+    <meta name="description" content="Explore Ezequiel Navarrete's portfolio of film scores, TV soundtracks, and media compositions. Award-winning original music for animation, short films, and documentaries.">
+    <meta name="keywords" content="film music, film scores, TV soundtracks, media composition, animation music, documentary music, Ezequiel Navarrete, orchestral mock-up">
+    <meta name="author" content="Ezequiel Navarrete">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Music for Media - Film Scores & Soundtracks">
+    <meta property="og:description" content="Award-winning film scores and soundtracks by Ezequiel Navarrete for animation, short films, and documentaries.">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Music for Media - Film Scores & Soundtracks">
+    <meta name="twitter:description" content="Award-winning film scores and soundtracks for animation, short films, and documentaries.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="music-for-media.css">
+</head>
+<body>
+    <header id="header">
+        <div class="wrapper nav-content">
+            <div id="logo">
+                <h1 class="logo-text"><a href="/">EZEQUIEL NAVARRETE</a></h1>
+                <h2 class="logo-subtitle">COMPOSER / ARRANGER</h2>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-right">
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="home.html"><span data-translate="nav.home">Home</span></a></li>
+                        <li><a href="music-for-media.html"><span data-translate="nav.filmMusic">Music for Media</span></a></li>
+                        <li><a href="classical-repertoire.html"><span data-translate="nav.classicRepertoire">Classic Repertoire</span></a></li>
+                        <li><a href="about.html"><span data-translate="nav.about">About</span></a></li>
+                        <li><a href="home.html#contact"><span data-translate="nav.contact">Contact</span></a></li>
+                    </ul>
+                </nav>
+                <button class="language-toggle" aria-label="Switch language">EN</button>
+                <div class="social-links">
+                    <a href="https://open.spotify.com/artist/4CKM38bqsmteM4Y2Tg5bY9?si=aTQa7Ol5RsK757KwUhoykQ" target="_blank" title="Spotify">
+                        <i class="fa-brands fa-spotify"></i>
+                    </a>
+                    <a href="https://youtube.com/@ezequielnavarretecaparros8961?si=86-wSiX92OQuqaSt" target="_blank" title="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100063551799546" target="_blank" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ezequiel_95/" target="_blank" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 data-translate="media.title">Music for Media</h1>
+            <p data-translate="media.subtitle">Original scores and soundtracks for film, television, and digital media</p>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <div class="container">
+            <!-- Projects grid will be loaded from CSV -->
+            <div class="projects-grid"></div>
+            
+            <!-- Detailed project view (hidden by default) -->
+            <div class="project-detail-view" style="display: none;">
+                <button class="back-to-grid-btn">
+                    <i class="fas fa-arrow-left"></i> 
+                    <span data-translate="media.backToProjects">Back to Projects</span>
+                </button>
+                <div class="project-detail-content"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Orchestral Mock-up Section -->
+    <section class="mockup-section">
+        <div class="container">
+            <h2 data-translate="media.mockupTitle">Orchestral Mock-up</h2>
+            <div class="mockup-grid">
+                <!-- YouTube embeds will be added here -->
+                <div class="mockup-video">
+                    <iframe width="100%" height="315" src="https://youtu.be/m7w3NdM90YA?si=WW7Q4X1bifEDfmgu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="mockup-video">
+                    <iframe width="100%" height="315" src="https://youtu.be/9AE3KwYYBM8?si=Z0WCswygFeMAqNDF" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Lightbox -->
+    <div class="image-lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="">
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ezequiel Navarrete</p>
+            <p data-translate="footer.composer">Composer / Arranger</p>
+            <a href="index.html" class="back-to-welcome" data-translate="footer.backToWelcome">Back to Welcome</a>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="media-projects-loader.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navRight = document.querySelector('.nav-right');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navRight.classList.toggle('active');
+                mobileMenuToggle.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
