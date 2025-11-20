@@ -170,8 +170,8 @@
 
     <section class="facebook-feed-section">
         <div class="container">
-            <h2>Latest Updates</h2>
-            <p class="section-intro">Follow my latest projects and news</p>
+            <h2 data-translate="facebook.title">Latest Updates</h2>
+            <p class="section-intro" data-translate="facebook.intro">Follow my latest projects and news</p>
             <div class="facebook-feed-container">
                 <div id="fb-root"></div>
                 <div class="fb-page" 
@@ -238,6 +238,9 @@
 
     <!-- Facebook SDK -->
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
+    
+    <!-- Clean URLs for GitHub Pages -->
+    <script src="clean-urls.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

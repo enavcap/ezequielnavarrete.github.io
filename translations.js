@@ -43,6 +43,10 @@ const translations = {
         'contact.message': 'Message',
         'contact.send': 'Send Message',
         
+        // Facebook Feed section
+        'facebook.title': 'Latest Updates',
+        'facebook.intro': 'Follow my latest projects and news',
+        
         // Classical Repertoire page
         'repertoire.title': 'Classical Repertoire',
         'repertoire.intro': 'Explore my collection of classical compositions and arrangements for various ensembles.',
@@ -124,6 +128,10 @@ const translations = {
         'contact.subject': 'Asunto',
         'contact.message': 'Mensaje',
         'contact.send': 'Enviar Mensaje',
+        
+        // Sección Facebook
+        'facebook.title': 'Últimas Actualizaciones',
+        'facebook.intro': 'Sigue mis últimos proyectos y noticias',
         
         // Página de repertorio clásico
         'repertoire.title': 'Repertorio Clásico',
