@@ -218,6 +218,17 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Check for hash in URL on page load and scroll to it
+            if (window.location.hash) {
+                setTimeout(() => {
+                    const targetId = window.location.hash.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 100);
+            }
+
             // Hero carousel functionality
             const slides = document.querySelectorAll('.hero-slide');
             const dots = document.querySelectorAll('.hero-dot');
@@ -259,9 +270,23 @@
 
             // Close menu when clicking on a link
             navLinks.forEach(link => {
-                link.addEventListener('click', () => {
+                link.addEventListener('click', (e) => {
                     menuToggle.classList.remove('active');
                     navRight.classList.remove('active');
+                    
+                    // Handle smooth scroll for anchor links
+                    const href = link.getAttribute('href');
+                    if (href && href.includes('#')) {
+                        e.preventDefault();
+                        const targetId = href.split('#')[1];
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        } else if (href.includes('home.html#')) {
+                            // If on same page but link has home.html prefix
+                            window.location.hash = targetId;
+                        }
+                    }
                 });
             });
 
