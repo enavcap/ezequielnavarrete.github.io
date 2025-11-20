@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // GitHub Pages 404 redirect handler
+        // This allows clean URLs without .html extension
+        (function() {
+            const path = window.location.pathname;
+            const segments = path.split('/').filter(segment => segment);
+            
+            if (segments.length > 0) {
+                const lastSegment = segments[segments.length - 1];
+                
+                // If the path doesn't have an extension, try adding .html
+                if (!lastSegment.includes('.')) {
+                    const htmlPath = path + '.html';
+                    window.location.replace(htmlPath);
+                    return;
+                }
+            }
+            
+            // If no match, redirect to home
+            window.location.replace('/');
+        })();
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
