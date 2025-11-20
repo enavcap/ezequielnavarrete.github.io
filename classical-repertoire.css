@@ -166,6 +166,24 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.social-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.social-links a:hover::after {
+    width: 80%;
 }
 
 .social-links a:hover {
@@ -708,7 +726,7 @@ footer p {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     body {
         padding-top: 80px;
     }
@@ -722,7 +740,7 @@ footer p {
     }
 
     .logo-text a {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .logo-subtitle {
@@ -745,6 +763,79 @@ footer p {
         gap: 30px;
         transition: right 0.3s ease;
         box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        z-index: 999;
+        margin-right: 0;
+    }
+
+    .nav-right.active {
+        right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .social-links {
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        width: 100%;
+    }
+
+    .social-links a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+
+    #header {
+        padding: 15px 20px;
+    }
+
+    .nav-content {
+        padding: 0 20px;
+    }
+
+    .logo-text a {
+        font-size: 1.5rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.7rem;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-right {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 80px 30px 30px;
+        gap: 30px;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        z-index: 999;
         margin-right: 0;
     }
 
@@ -884,5 +975,15 @@ footer p {
 
     .works-container {
         gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text a {
+        font-size: 1.1rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.6rem;
     }
 }

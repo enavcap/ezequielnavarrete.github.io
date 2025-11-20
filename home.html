@@ -59,6 +59,9 @@
                     <a href="https://www.instagram.com/ezequiel_95/" target="_blank" title="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
+                    <a href="https://www.imdb.com/es/name/nm11368180/?ref_=ext_shr_lnk" target="_blank" title="IMDb">
+                        <i class="fa-brands fa-imdb"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -134,10 +137,18 @@
         <div class="container">
             <h2 data-translate="contact.title">Contact</h2>
             <p class="contact-intro" data-translate="contact.intro">Interested in working together? Send me a message and I'll get back to you as soon as possible.</p>
-            <form class="contact-form" action="https://formsubmit.co/ezequielcompo@gmail.com" method="POST">
+            
+            <div class="thank-you-message" id="thankYouMessage" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h3>Thank You for Contacting!</h3>
+                <p>I'll get in touch with you as soon as possible.</p>
+            </div>
+
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/ezequielcompo@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="New contact from website">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                <input type="hidden" name="_template" value="box">
+                <input type="text" name="_honey" style="display:none">
                 <div class="form-group">
                     <label for="name" data-translate="contact.name">Name *</label>
                     <input type="text" id="name" name="name" required>
@@ -223,6 +234,40 @@
                     navRight.classList.remove('active');
                 }
             });
+
+            // Contact form submission handler
+            const contactForm = document.getElementById('contactForm');
+            const thankYouMessage = document.getElementById('thankYouMessage');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Submit form data using fetch
+                    const formData = new FormData(this);
+                    
+                    fetch(this.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                            // Hide form and show thank you message
+                            contactForm.style.display = 'none';
+                            thankYouMessage.style.display = 'block';
+                            
+                            // Scroll to thank you message
+                            thankYouMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        } else {
+                            alert('There was a problem sending your message. Please try again.');
+                        }
+                    }).catch(error => {
+                        alert('There was a problem sending your message. Please try again.');
+                    });
+                });
+            }
         });
     </script>
     <script src="repertoire-preview.js"></script>
