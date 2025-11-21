@@ -11,11 +11,15 @@ const translations = {
         'nav.contact': 'Contact',
         
         // Hero section
-        'hero.title': 'COMPOSER / ARRANGER',
-        'hero.welcome': 'Welcome to my musical world',
-        'hero.subtitle': 'Creating original compositions and arrangements for film, concert, and beyond',
+        'hero.name': 'Ezequiel Navarrete',
+        'hero.title': 'COMPOSER & ARRANGER',
+        'hero.description': 'Award-winning composer creating original scores for film, television, and concert music',
         'hero.quote': '"Working with Ezequiel was an incredible experience. His ability to capture emotion through music brought our film to life."',
         'hero.quoteAuthor': '— Alberto Cano, La Última Campanada',
+        
+        // Testimonial section
+        'testimonial.quote': '"Working with Ezequiel was an incredible experience. His ability to capture emotion through music brought our film to life."',
+        'testimonial.author': '— Director, La Última Campanada',
         
         // Bio section (index.html)
         'bio.title': 'About Me',
@@ -98,11 +102,15 @@ const translations = {
         'nav.contact': 'Contacto',
         
         // Sección hero
-        'hero.title': 'COMPOSITOR / ARREGLISTA',
-        'hero.welcome': 'Bienvenido a mi mundo musical',
-        'hero.subtitle': 'Creando composiciones originales y orquestaciones para cine, concierto y más',
+        'hero.name': 'Ezequiel Navarrete',
+        'hero.title': 'COMPOSITOR Y ARREGLISTA',
+        'hero.description': 'Compositor galardonado creando bandas sonoras originales para cine, televisión y música de concierto',
         'hero.quote': '"Trabajar con Ezequiel fue una experiencia increíble. Su capacidad para capturar emociones a través de la música dio vida a nuestra película."',
         'hero.quoteAuthor': '— Alberto Cano, La Última Campanada',
+        
+        // Sección testimonios
+        'testimonial.quote': '"Trabajar con Ezequiel fue una experiencia increíble. Su capacidad para capturar emociones a través de la música dio vida a nuestra película."',
+        'testimonial.author': '— Director, La Última Campanada',
         
         // Sección biografía (index.html)
         'bio.title': 'Sobre Mí',

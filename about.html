@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Ezequiel Navarrete - Composer Bio & Background | Film & Concert Music</title>
     <meta name="description" content="Learn about composer Ezequiel Navarrete - Berklee College of Music graduate specializing in film scoring, orchestration, and concert music. Based in Valencia, Spain.">
-    <meta name="keywords" content="Ezequiel Navarrete biography, composer bio, Berklee College of Music, Valencia composer, film music composer, orchestrator background">
     <meta name="author" content="Ezequiel Navarrete">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://ezequielnavarrete.com/about.html">
@@ -76,6 +75,19 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        /* Screen reader only class */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
         }
 
         body {
@@ -599,8 +611,8 @@
     <header id="header">
         <div class="wrapper nav-content">
             <div id="logo">
-                <h1 class="logo-text"><a href="/">EZEQUIEL NAVARRETE</a></h1>
-                <h2 class="logo-subtitle">COMPOSER / ARRANGER</h2>
+                <div class="logo-text"><a href="/">EZEQUIEL NAVARRETE</a></div>
+                <div class="logo-subtitle">COMPOSER / ARRANGER</div>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -611,29 +623,34 @@
                 <nav class="main-nav">
                     <ul class="nav-links">
                         <!--<li><a href="welcome.html"><span>Home</span></a></li>-->
-                        <li><a href="home.html"><span data-translate="nav.home">Home</span></a></li>
+                        <li><a href="index.html"><span data-translate="nav.home">Home</span></a></li>
                         <li><a href="music-for-media.html"><span data-translate="nav.filmMusic">Music for Media</span></a></li>
                         <li><a href="classical-repertoire.html"><span data-translate="nav.classicRepertoire">Classic Repertoire</span></a></li>
                         <li><a href="about.html"><span data-translate="nav.about">About</span></a></li>
-                        <li><a href="home.html#contact"><span data-translate="nav.contact">Contact</span></a></li>
+                        <li><a href="index.html#contact"><span data-translate="nav.contact">Contact</span></a></li>
                     </ul>
                 </nav>
                 <button class="language-toggle" aria-label="Switch language">EN</button>
                 <div class="social-links">
-                    <a href="https://open.spotify.com/artist/4CKM38bqsmteM4Y2Tg5bY9?si=aTQa7Ol5RsK757KwUhoykQ" target="_blank" title="Spotify">
+                    <a href="https://open.spotify.com/artist/4CKM38bqsmteM4Y2Tg5bY9?si=aTQa7Ol5RsK757KwUhoykQ" target="_blank" title="Spotify" aria-label="Visit Ezequiel Navarrete on Spotify">
                         <i class="fa-brands fa-spotify"></i>
+                        <span class="sr-only">Spotify</span>
                     </a>
-                    <a href="https://youtube.com/@ezequielnavarretecaparros8961?si=86-wSiX92OQuqaSt" target="_blank" title="YouTube">
+                    <a href="https://youtube.com/@ezequielnavarretecaparros8961?si=86-wSiX92OQuqaSt" target="_blank" title="YouTube" aria-label="Visit Ezequiel Navarrete on YouTube">
                         <i class="fa-brands fa-youtube"></i>
+                        <span class="sr-only">YouTube</span>
                     </a>
-                    <a href="https://www.facebook.com/profile.php?id=100063551799546" target="_blank" title="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=100063551799546" target="_blank" title="Facebook" aria-label="Visit Ezequiel Navarrete on Facebook">
                         <i class="fa-brands fa-facebook-f"></i>
+                        <span class="sr-only">Facebook</span>
                     </a>
-                    <a href="https://www.instagram.com/ezequiel_95/" target="_blank" title="Instagram">
+                    <a href="https://www.instagram.com/ezequiel_95/" target="_blank" title="Instagram" aria-label="Follow Ezequiel Navarrete on Instagram">
                         <i class="fa-brands fa-instagram"></i>
+                        <span class="sr-only">Instagram</span>
                     </a>
-                    <a href="https://www.imdb.com/es/name/nm11368180/?ref_=ext_shr_lnk" target="_blank" title="IMDb">
+                    <a href="https://www.imdb.com/es/name/nm11368180/?ref_=ext_shr_lnk" target="_blank" title="IMDb" aria-label="View Ezequiel Navarrete on IMDb">
                         <i class="fa-brands fa-imdb"></i>
+                        <span class="sr-only">IMDb</span>
                     </a>
                 </div>
             </div>
@@ -665,7 +682,7 @@
             </div>
         </div>
         <div class="about-image">
-            <img src="images/aboutmepage.jpg" alt="Ezequiel Navarrete in recording studio" class="profile-image">
+            <img src="images/aboutmepage.jpg" alt="Ezequiel Navarrete - Composer and Orchestrator" title="Ezequiel Navarrete in his studio" class="profile-image" loading="lazy" width="800" height="1200">
         </div>
     </main>
 

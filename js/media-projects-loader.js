@@ -288,7 +288,7 @@ function generateProjectCard(project) {
     return `
         <div class="project-card">
             <div class="project-image" style="cursor: pointer;" onclick="openImageLightbox('${project.imageUrl}', '${project.title}')">
-                <img src="${project.imageUrl}" alt="${project.title}">
+                <img src="${project.imageUrl}" alt="${project.title}" title="${project.title} - Project Image" loading="lazy" width="800" height="600">
             </div>
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
@@ -315,7 +315,7 @@ function generateGridItem(project, index) {
              data-project-index="${index}"
              data-has-video="${hasVideo}">
             <div class="project-grid-image">
-                <img src="${project.imageUrl}" alt="${project.title}">
+                <img src="${project.imageUrl}" alt="${project.title}" title="${project.title} - Click to view details" loading="lazy" width="400" height="300">
             </div>
         </div>
     `;

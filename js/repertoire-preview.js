@@ -82,7 +82,7 @@ function createPreviewCard(work, category) {
     return `
         <a href="classical-repertoire.html#${category}-${workId}" class="repertoire-preview-card">
             <div class="repertoire-preview-image">
-                <img src="${work.pdfPreview}" alt="${work.title}" onerror="this.src='images/scores/default-preview.jpg'">
+                <img src="${work.pdfPreview}" alt="${work.title}" title="${work.title} - Score Preview" loading="lazy" width="400" height="566" onerror="this.src='images/scores/default-preview.jpg'">
             </div>
             <div class="repertoire-preview-content">
                 <h3>${work.title}</h3>

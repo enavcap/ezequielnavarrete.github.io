@@ -1,6 +1,19 @@
 /* Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Screen reader only class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -198,7 +211,95 @@ body {
 
 .hero-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4); }
 
-.hero-content { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; color:#fff; width:80%; max-width:800px; }
+.hero-content { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    color: #fff; 
+    width: 90%; 
+    max-width: 900px;
+    z-index: 2;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.hero-name {
+    font-size: 8rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.9);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.hero-quote-inline {
+    margin-top: 2.5rem;
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    border-left: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero-quote-inline p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 10px 0;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.hero-quote-inline cite {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
 
 .hero-title { font-size:3rem; font-weight:700; margin-bottom:1rem; }
 .hero-subtitle { font-size:1.2rem; margin-bottom:2rem; }
@@ -453,6 +554,40 @@ body {
     width: 100%;
 }
 
+/* Testimonial Section */
+.testimonial-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.testimonial {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.testimonial p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #fff;
+    margin: 0 0 25px 0;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.testimonial cite {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
 /* Contact Section */
 .contact-section {
     padding: 60px 0;
@@ -668,6 +803,21 @@ footer p { margin:5px 0; }
     }
 }
 
+@media (max-width: 1024px) {
+    .hero-name {
+        font-size: 5rem;
+        letter-spacing: 0.1em;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 80px;
@@ -739,8 +889,23 @@ footer p { margin:5px 0; }
     }
 
     .hero-section {
-        height: 60vh;
+        height: 70vh;
         margin-bottom: 40px;
+    }
+
+    .hero-name {
+        font-size: 3rem;
+        letter-spacing: 0.08em;
+        margin-bottom: 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
     }
 
     .hero-quote {
@@ -859,20 +1024,58 @@ footer p { margin:5px 0; }
     }
 
     .hero-section {
-        height: 50vh;
+        height: 65vh;
     }
 
-    .hero-quote blockquote {
+    .hero-name {
+        font-size: 1.4rem;
+        letter-spacing: 0.03em;
+        margin-bottom: 0.6rem;
+    }
+
+    .hero-title {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-description {
+        font-size: 0.75rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero-quote-inline {
         padding: 15px 20px;
+        margin-top: 1.5rem;
     }
 
-    .hero-quote p {
+    .hero-quote-inline p {
         font-size: 0.95rem;
         line-height: 1.5;
     }
 
-    .hero-quote cite {
-        font-size: 0.75rem;
+    .hero-quote-inline cite {
+        font-size: 0.8rem;
+    }
+
+    .testimonial-section {
+        padding: 50px 0;
+    }
+
+    .testimonial {
+        padding: 25px;
+    }
+
+    .testimonial p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .testimonial cite {
+        font-size: 0.9rem;
     }
 
     .bio-content h2,
@@ -891,5 +1094,28 @@ footer p { margin:5px 0; }
     .tracks-grid,
     .preview-grid {
         gap: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-name {
+        font-size: 1.2rem;
+        letter-spacing: 0.02em;
+    }
+
+    .hero-title {
+        font-size: 0.85rem;
+    }
+
+    .hero-description {
+        font-size: 0.7rem;
+    }
+
+    .hero-quote-inline p {
+        font-size: 0.8rem;
+    }
+
+    .hero-quote-inline cite {
+        font-size: 0.7rem;
     }
 }

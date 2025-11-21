@@ -283,8 +283,8 @@ function generateWorkCard(work) {
                         ${generateMediaPlayer(work.audioFile)}
                     </div>
                     <div class="work-preview">
-                        <div class="pdf-preview" onclick="openLightbox('${work.pdfPreview}', '${work.title.replace(/'/g, "\\'")}')">
-                            <img src="${work.pdfPreview}" alt="Score preview">
+                        <div class="pdf-preview" onclick="openLightbox('${work.pdfPreview}', '${work.title.replace(/'/g, "\\'")}")">
+                            <img src="${work.pdfPreview}" alt="${work.title} - Score preview" title="${work.title} - Click to enlarge" loading="lazy" width="400" height="566">
                         </div>
                         ${purchaseButtonHTML}
                     </div>
@@ -457,7 +457,7 @@ function initializeLightbox() {
         const lightboxHTML = `
             <div id="imageLightbox" class="lightbox">
                 <span class="lightbox-close">&times;</span>
-                <img class="lightbox-content" id="lightboxImage">
+                <img class="lightbox-content" id="lightboxImage" alt="Score preview" title="Score preview" loading="lazy" width="800" height="1132">
                 <div class="lightbox-caption" id="lightboxCaption"></div>
             </div>
         `;
